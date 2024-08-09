@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the Treasure</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            overflow: hidden;
+            text-align: center;
+        }
+        h1 {
+            padding-top: 3%;
+            font-size: 24px;
+            color: #333;
+        }
+        canvas {
+            border: 1px solid rgb(255, 255, 255);
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        .reset-button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .reset-button:hover {
+            background-color: #0056b3;
+        }
+        .counter {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #ffffff;
+            color: #000000;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .size-controls {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .size-button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .size-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Find the treasure with the fewest attempts</h1>
+    <div class="size-controls">
+        <button class="size-button" id="decreaseSize">-</button>
+        <button class="size-button" id="increaseSize">+</button>
+    </div>
+    <canvas id="canvas" width="800" height="600"></canvas>
+    <button class="reset-button" id="resetButton">Reset</button>
+    <div class="counter" id="counter">0</div>
+    <script src="script.js"></script>
+</body>
+</html>
